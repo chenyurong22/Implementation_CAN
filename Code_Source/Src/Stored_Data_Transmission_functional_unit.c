@@ -112,85 +112,85 @@ DTC_Record user_defined_memory_list[MAX_DTC_COUNT];
 // Fonction principale du service ReadDTCInformation
 void uds_read_dtc_information(uint8_t sub_function, uint8_t* data, uint8_t data_length) {
     switch (sub_function) {
-        case REPORT_NUMBER_OF_DTC_BY_STATUS_MASK:
+        case REPORT_NUMBER_OF_DTC_BY_STATUS_MASK://0x01
             report_number_of_dtc_by_status_mask(data, data_length);
             break;
-        case REPORT_DTC_BY_STATUS_MASK:
+        case REPORT_DTC_BY_STATUS_MASK://0x02
             report_dtc_by_status_mask(data, data_length);
             break;
-        case REPORT_DTC_SNAPSHOT_IDENTIFICATION:
+        case REPORT_DTC_SNAPSHOT_IDENTIFICATION://0x03
             report_dtc_snapshot_identification(data, data_length);
             break;
-        case REPORT_DTC_SNAPSHOT_RECORD_BY_DTC_NUMBER:
+        case REPORT_DTC_SNAPSHOT_RECORD_BY_DTC_NUMBER://0x04
             report_dtc_snapshot_record_by_dtc_number(data, data_length);
             break;
-        case REPORT_DTC_STORED_DATA_BY_RECORD_NUMBER:
+        case REPORT_DTC_STORED_DATA_BY_RECORD_NUMBER://0x05
             report_dtc_stored_data_by_record_number(data, data_length);
             break;
-        case REPORT_DTC_EXT_DATA_RECORD_BY_DTC_NUMBER:
+        case REPORT_DTC_EXT_DATA_RECORD_BY_DTC_NUMBER://0x06
             report_dtc_ext_data_record_by_dtc_number(data, data_length);
             break;
-        case REPORT_NUMBER_OF_DTC_BY_SEVERITY_MASK:
+        case REPORT_NUMBER_OF_DTC_BY_SEVERITY_MASK://0x07
             report_number_of_dtc_by_severity_mask(data, data_length);
             break;
-        case REPORT_DTC_BY_SEVERITY_MASK_RECORD:
+        case REPORT_DTC_BY_SEVERITY_MASK_RECORD://0x08
             report_dtc_by_severity_mask_record(data, data_length);
             break;
-        case REPORT_SEVERITY_INFORMATION_OF_DTC:
+        case REPORT_SEVERITY_INFORMATION_OF_DTC://0x09
             report_severity_information_of_dtc(data, data_length);
             break;
-        case REPORT_SUPPORTED_DTC:
+        case REPORT_SUPPORTED_DTC://0x0A
             report_supported_dtc(data, data_length);
             break;
-        case REPORT_FIRST_TEST_FAILED_DTC:
+        case REPORT_FIRST_TEST_FAILED_DTC://0x0B
             report_first_test_failed_dtc(data, data_length);
             break;
-        case REPORT_FIRST_CONFIRMED_DTC:
+        case REPORT_FIRST_CONFIRMED_DTC://0x0C
             report_first_confirmed_dtc(data, data_length);
             break;
-        case REPORT_MOST_RECENT_TEST_FAILED_DTC:
+        case REPORT_MOST_RECENT_TEST_FAILED_DTC://0x0D
             report_most_recent_test_failed_dtc(data, data_length);
             break;
-        case REPORT_MOST_RECENT_CONFIRMED_DTC:
+        case REPORT_MOST_RECENT_CONFIRMED_DTC://0x0E
             report_most_recent_confirmed_dtc(data, data_length);
             break;
-        case REPORT_MIRROR_MEMORY_DTC_BY_STATUS_MASK:
+        case REPORT_MIRROR_MEMORY_DTC_BY_STATUS_MASK://0x0F
             report_mirror_memory_dtc_by_status_mask(data, data_length);
             break;
-        case REPORT_MIRROR_MEMORY_DTC_EXT_DATA_RECORD:
+        case REPORT_MIRROR_MEMORY_DTC_EXT_DATA_RECORD://0x10
             report_mirror_memory_dtc_ext_data_record(data, data_length);
             break;
-        case REPORT_NUMBER_OF_MIRROR_MEMORY_DTC_BY_STATUS_MASK:
+        case REPORT_NUMBER_OF_MIRROR_MEMORY_DTC_BY_STATUS_MASK://0x11
             report_number_of_mirror_memory_dtc_by_status_mask(data, data_length);
             break;
-        case REPORT_NUMBER_OF_EMISSIONS_OBD_DTC_BY_STATUS_MASK:
+        case REPORT_NUMBER_OF_EMISSIONS_OBD_DTC_BY_STATUS_MASK://0x12
             report_number_of_emissions_obd_dtc_by_status_mask(data, data_length);
             break;
-        case REPORT_EMISSIONS_OBD_DTC_BY_STATUS_MASK:
+        case REPORT_EMISSIONS_OBD_DTC_BY_STATUS_MASK://0x13
             report_emissions_obd_dtc_by_status_mask(data, data_length);
             break;
-        case REPORT_DTC_FAULT_DETECTION_COUNTER:
+        case REPORT_DTC_FAULT_DETECTION_COUNTER://0x14
             report_dtc_fault_detection_counter(data, data_length);
             break;
-        case REPORT_DTC_WITH_PERMANENT_STATUS:
+        case REPORT_DTC_WITH_PERMANENT_STATUS://0x15
             report_dtc_with_permanent_status(data, data_length);
             break;
-        case REPORT_DTC_EXT_DATA_RECORD_BY_RECORD_NUMBER:
+        case REPORT_DTC_EXT_DATA_RECORD_BY_RECORD_NUMBER://0x16
             report_dtc_ext_data_record_by_record_number(data, data_length);
             break;
-        case REPORT_USER_DEF_MEMORY_DTC_BY_STATUS_MASK:
+        case REPORT_USER_DEF_MEMORY_DTC_BY_STATUS_MASK://0x17
             report_user_def_memory_dtc_by_status_mask(data, data_length);
             break;
-        case REPORT_USER_DEF_MEMORY_DTC_SNAPSHOT_RECORD:
+        case REPORT_USER_DEF_MEMORY_DTC_SNAPSHOT_RECORD://0x18
             report_user_def_memory_dtc_snapshot_record(data, data_length);
             break;
-        case REPORT_USER_DEF_MEMORY_DTC_EXT_DATA_RECORD:
+        case REPORT_USER_DEF_MEMORY_DTC_EXT_DATA_RECORD://0x19
             report_user_def_memory_dtc_ext_data_record(data, data_length);
             break;
-        case REPORT_WWH_OBD_DTC_BY_MASK_RECORD:
+        case REPORT_WWH_OBD_DTC_BY_MASK_RECORD://0x42
             report_wwh_obd_dtc_by_mask_record(data, data_length);
             break;
-        case REPORT_WWH_OBD_DTC_WITH_PERMANENT_STATUS:
+        case REPORT_WWH_OBD_DTC_WITH_PERMANENT_STATUS://0x55
             report_wwh_obd_dtc_with_permanent_status(data, data_length);
             break;
         default:
